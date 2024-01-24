@@ -1,0 +1,581 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/fondo_header_1.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: 100vh;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+}
+
+.menu-btn {
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    border: 3px solid #fff;
+    margin: 6px 0;
+}
+
+.logo {
+    width: 200px;
+}
+
+.menu {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    flex-grow: 2;
+    width: 100%;
+    margin-top: 1rem;
+    background-color: #ffffff3d;
+    padding: 0.8rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.menu.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.intro {
+    align-self: flex-end;
+    margin-top: auto;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+}
+
+.intro h1 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.intro p {
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin-bottom: 3rem;
+}
+
+.contenedorServicios {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "tituloUno " "leftServicios" "rightServicios";
+    width: 100%;
+    margin: auto;
+    background-color: #FFFFFF;
+    gap: 2rem;
+    padding: 2rem 2rem 4rem 2rem;
+}
+
+.tituloUno {
+    grid-area: tituloUno;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.tituloUno h2 {
+    font-size: 2rem;
+    color: #737480;
+    font-weight: 900;
+}
+
+.leftServicios,
+.rightServicios {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 2rem;
+    align-content: center;
+}
+
+
+.cardServicios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.circle {
+    display: grid;
+    place-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #FFB500;
+    -webkit-box-shadow: 0px 13px 23px -15px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 13px 23px -15px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 13px 23px -15px rgba(0, 0, 0, 0.75);
+}
+
+.circle img {
+    height: 30px;
+    width: 30px;
+    object-fit: contain;
+}
+
+.cardTexto {
+    flex: 1;
+    font-size: 0.8rem;
+}
+
+.contenedorProposito {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-image: url(../img/fondo_proposito.png);
+    background-repeat: no-repeat;
+    background-position: start;
+    background-size: cover;
+    padding: 0 2rem 4rem 2rem;
+    margin-bottom: 3rem;
+}
+
+.tituloDos {
+    text-align: left;
+    font-size: 1rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+.tituloDos h2 {
+    font-size: 2rem;
+    color: #FFFFFF;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.tituloDos p {
+    color: #FFFFFF;
+    font-size: 0.9rem;
+}
+
+.contenedorCards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cardProposito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    text-wrap: balance;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #FFFFFF;
+    border: 2px solid #FFB500;
+    height: 280px;
+    width: 285px;
+    line-height: 1rem;
+}
+
+.cardProposito p {
+    font-size: 0.8rem;
+    color: #4E4E4F;
+}
+
+.cardProposito h3 {
+    color: #4E4E4F;
+    font-weight: 900;
+    font-size: 1rem;
+}
+
+.contenedorSolar {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    place-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    width: 80%;
+    margin: auto;
+}
+
+.tituloTres {
+    text-align: center;
+}
+
+.tituloTres h2 {
+    font-size: 2rem;
+    color: #43B06C;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.cardSolar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+    border: 1px solid #8C8C8C;
+    border-radius: 1rem;
+    overflow: hidden;
+    padding: 0.8rem;
+}
+
+.iconImg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.cardSolar p {
+    font-size: 0.8rem;
+    color: #424242;
+    padding: 0.5rem;
+}
+
+.contenedorFooter {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    background-image: url(../img/fondo_footer.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    padding: 10rem;
+}
+
+.contenedorFooter h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #FFB500;
+}
+
+.contenedorFooter h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    padding: 0.2rem;
+}
+
+/* ------------ PSEUDOCLASES ------------ */
+
+.menu li a:hover{
+    color: #FFB500;
+}
+
+/* ------------ MEDIA QRY ------------ */
+
+@media screen and (min-width: 600px) {
+    .contenedor {
+        width: 80%;
+        margin: auto;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .navBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 2rem 10rem;
+    }
+
+    .menu-btn {
+        cursor: pointer;
+    }
+
+    .logo {
+        width: 200px;
+    }
+
+    .menu {
+        opacity: 1;
+        visibility: visible;
+        display: flex;
+        justify-content: right;
+        gap: 3rem;
+        font-size: 1rem;
+        flex-grow: 2;
+        width: auto;
+        margin-top: 1rem;
+        background-color: transparent;
+        padding: 0;
+
+    }
+
+    .menu li a {
+        color: #ffffff;
+        font-weight: 500;
+    }
+
+    .intro {
+        align-self: flex-start;
+        margin-top: auto;
+        margin-left: 10rem;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .intro h1 {
+        color: #fff;
+        font-weight: 700;
+        font-size: 2.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .intro p {
+        color: #fff;
+        font-weight: 400;
+        font-size: 1.5rem;
+        width: 55%;
+        margin-bottom: 2rem;
+    }
+
+    .contenedorServicios {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas: "tituloUno tituloUno" "leftServicios rightServicios";
+        width: 80%;
+        margin: auto;
+        background-color: #FFFFFF;
+        border-radius: 2rem;
+        margin-top: -25px;
+        z-index: 2;
+    }
+
+    .tituloUno {
+        grid-area: tituloUno;
+        text-align: center;
+        margin: 3rem 0 1rem 0;
+    }
+
+    .tituloUno h2 {
+        font-size: 3rem;
+        color: #737480;
+        font-weight: 900;
+    }
+
+    .leftServicios {
+        grid-area: leftServicios;
+        display: grid;
+        grid-template-columns: repeat(1, 0.6fr);
+        grid-template-rows: repeat(3, 0.25fr);
+        align-content: start;
+        justify-content: end;
+    }
+
+    .rightServicios {
+        grid-area: rightServicios;
+        display: grid;
+        grid-template-columns: repeat(1, 0.6fr);
+        grid-template-rows: repeat(3, 0.25fr);
+        align-content: center;
+
+    }
+
+    .cardServicios {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        background-color: #FFFFFF;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 1.5rem;
+        box-shadow: 0px 9px 13px -5px rgba(0, 0, 0, 0.33);
+        -webkit-box-shadow: 0px 9px 13px -5px rgba(0, 0, 0, 0.452);
+        -moz-box-shadow: 0px 9px 13px -5px rgba(0, 0, 0, 0.456);
+
+    }
+
+    .circle {
+        display: grid;
+        place-content: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: #FFB500;
+        -webkit-box-shadow: 0px 13px 23px -15px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 13px 23px -15px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 13px 23px -15px rgba(0, 0, 0, 0.75);
+    }
+
+    .circle img {
+        height: 30px;
+        width: 30px;
+        object-fit: contain;
+    }
+
+    .cardTexto {
+        flex: 1;
+        font-size: 0.8rem;
+    }
+
+    .contenedorProposito {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 80vh;
+        align-items: center;
+        background-image: url(../img/fondo_proposito.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 0 2rem 4rem 2rem;
+        margin-top: -40px;
+        margin-bottom: 12rem;
+        z-index: 1;
+    }
+
+    .tituloDos {
+        text-align: center;
+        margin-top: 18rem;
+        margin-bottom: 2rem;
+        width: 55%;
+    }
+
+    .tituloDos h2 {
+        font-size: 3rem;
+        color: #FFFFFF;
+        font-weight: 900;
+        margin-bottom: 2rem;
+    }
+
+    .tituloDos p {
+        color: #FFFFFF;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        font-weight: 300;
+    }
+
+    .contenedorCards {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .cardProposito {
+        justify-content: start;
+        height: 250px;
+        width: 255px;
+        border: 3px solid #FFB500;
+        padding: 1.2rem;
+    }
+
+    .cardProposito img {
+        height: 60px;
+        width: auto;
+        margin-bottom: 1rem;
+    }
+
+    .cardProposito p {
+        font-size: 0.8rem;
+        text-wrap: balance;
+        line-height: 1rem;
+    }
+
+    .cardProposito h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .tituloTres {
+        grid-column: span 3;
+    }
+
+    .tituloTres h2 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .contenedorSolar{
+        gap: 1rem;
+        margin-bottom: 7rem;
+    }
+
+    .contenedorImg {
+        display: flex;
+        height: 100px;
+        width: 90%;
+        border: 1px solid #8C8C8C;
+        border-radius: 1rem;
+        overflow: hidden;
+        padding: 1.5rem;
+    }
+
+    .iconImg {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .cardSolar p {
+        font-size: 0.8rem;
+        color: #424242;
+        padding: 0.5rem;
+        width: 90%;
+
+    }
+
+    .contenedorFooter h2 {
+        font-size: 3rem;
+        font-weight: 900;
+        color: #FFB500;
+    }
+
+    .contenedorFooter h3 {
+        font-size: 1.5rem;
+    }
+}
